@@ -1,0 +1,13 @@
+http://www.nikunomarui.co.jp/company.htm
+http://www.sendai-marui.jp/category/1/
+http://www.sendai-marui.jp/category/2/
+http://www.sendai-marui.jp/category/3/
+http://www.sendai-marui.jp/category/4/
+http://www.sendai-marui.jp/category/5/
+http://www.sendai-marui.jp/category/6/
+http://www.sendai-marui.jp/category/7/
+http://www.sendai-marui.jp/category/8/
+http://www.sendai-marui.jp/category/9/
+http://www.sendai-marui.jp/category/10/
+http://www.sendai-marui.jp/app/campaignGoodsList/index/CampaignId/1
+http://www.sendai-marui.jp/app/campaigngoodslist/index/GoodsCurrentPage/2/hidCurrentPage/2/selChangeOrder/1/TokenKey//CampaignId/1/hidMemberNo//hidUrl//hidBuyingDisplayType/0/

@@ -1,0 +1,25 @@
+社名：農業生産法人　株式会社GRA 
+住所：宮城県亘理郡山元町山寺字桜堤48　
+代表電話：0223-37-9634
+商品名：
+商品サイズ：
+JANコード：
+規格（商品個数）：
+栄養成分（原材料）
+参考情報：有り
+価格： 
+==JPG==
+companylogo：企業ロゴ
+company：会社概要
+goods-moikko：もういっこ概要
+goods-oicberi-：おいＣベリー概要
+goods-ookimi：おおきみ概要
+goods-tochiotome：とちおとめ概要
+goods-toukun：桃薫概要
+goods-ucarupion：ＵＣアルピオン概要
+saibaihouhou：栽培方法
+koujou：工場
+saibaisetubi：栽培設備
+syuukakuziki：収穫時期
+housyanou：宮城県放射能検査結果
+housyanou2：放射能調査結果記者発表資料

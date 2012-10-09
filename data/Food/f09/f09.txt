@@ -1,0 +1,17 @@
+社名：
+住所：
+代表電話：
+商品名：
+商品サイズ：
+JANコード：
+規格（商品個数）：
+栄養成分（原材料）
+参考情報：
+価格： 
+==JPG==
+company #会社
+goods #商品
+detail #詳細
+detail2 #詳細
+appendix #付記
+appendix2 #付記
