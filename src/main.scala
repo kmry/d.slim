@@ -25,7 +25,6 @@ def category(name:String) ={
 		case _ =>"その他"
 	}
 s""".hero-unit
-  hr
   h2 ${str} 分野　企業一覧
   p
   ul"""
@@ -34,7 +33,6 @@ s""".hero-unit
 def head(name:String) =s""".hero-unit
   h1 ${name}
   p
-  p 概要
   table.table-bordered
 """
 
@@ -84,18 +82,16 @@ def splitCOL(line:String, fn:(Array[String]) => Unit) :String= {// 処理した�
 }
 /////////////////////////////////////////////////////////////////////////////////////
 
+  val IN="../../web_epub/public/"
+  val OUT="../nanoc-BMC/content/"
+
   def main(args: Array[String]) = {
-		val pw0 = 	makePW("../data/index.slim")
+		val pw0 = 	makePW("${OUT}index.slim")
 		//対象分野事にindex.slimに追加していく
-		pw0.println(
-"""
-h1 イチオシ商材一覧
-p
-""")
 		pw0.println(
 			make ("Mono","m", List(4,6,8,11,13,15) ))
 		pw0.println(
-			make ("Food","f", List(1,2,5) ))
+			make ("Food","f", List(1,2,5,6,7,9) ))
 		pw0.close
 	
   }
@@ -120,7 +116,7 @@ p
 				while ({line1 =br.readLine(); line1.length>0}) 
 					splitCOL (line1,(arr:Array[String]) =>{
 							//企業ページへのhrefリンクを出力
-						pw.println(s"\t\t== aw_image_slide('/assets/images/${target}/${str}/${arr(0)}.JPG', '${arr(1)}')")
+						pw.println(s"\t\t== aw_image_slide('/assets/${target}/${str}/${arr(0)}.JPG', '${arr(1)}')")
 					})
 			} catch {
 			case _ => print(_) 
@@ -133,17 +129,22 @@ p
 		//処理対象ファイルの読み込み
 		ids foreach {id =>
 			val str =f"${t}${id}%02d"
-			val base = s"../data/${target}/"
-			val src = s"${base}${str}/${str}.txt"
+			print (str)
+			val base = s""
+			val src = s"${IN}/assets/${target}/${str}/${str}.txt"
+			val out_dir= s"${OUT}${str}"
+
+			println(src)
 			val filereader = new FileReader(src);
 			val br = new BufferedReader(filereader);
-			val out_dir= s"${base}/${str}"
 			(new File(out_dir)).mkdirs()
 				//"mkdirs"メソッド : 作成ディレクトリの親ディレクトリなき場合、親ディレクトリもまとめて作成
 			//ファイル出力用PrintWriter cf.http://j.mp/M9JFQW
 			val pw = 	makePW(out_dir+"/index.slim")
 			val companyName = output (br,pw,str)
-			indexSnips += s"\tli\n\t\ta href='${str}' ${companyName}\n"
+			val link = s"\tli\n\t\ta href='${str}' ${companyName}\n"
+			println(link)
+			indexSnips += link
 			pw.close()
 			
 		}

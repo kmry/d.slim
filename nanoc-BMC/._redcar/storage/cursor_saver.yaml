@@ -1,0 +1,54 @@
+--- 
+cursor_positions: 
+  - :path: lib/awesome-showcase.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.003000 +09:00
+  - :path: Rules
+    :cursor_offset: 1599
+    :timestamp: 2012-10-05 10:15:57.970000 +09:00
+  - :path: lib/default.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.054000 +09:00
+  - :path: lib/minify_filter.__rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.105000 +09:00
+  - :path: lib/preprocessors.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.122000 +09:00
+  - :path: lib/shellcmd_filter.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.139000 +09:00
+  - :path: lib/typogruby_filter.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.155000 +09:00
+  - :path: lib/coffee-script_filter.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.020000 +09:00
+  - :path: lib/concat_filter.rb
+    :cursor_offset: 1246
+    :timestamp: 2012-10-05 08:55:26.037000 +09:00
+  - :path: lib/galleria.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:26.072000 +09:00
+  - :path: layouts/default.slim
+    :cursor_offset: 42
+    :timestamp: 2012-10-05 09:34:37.780000 +09:00
+  - :path: layouts/head.slim
+    :cursor_offset: 215
+    :timestamp: 2012-10-05 08:55:25.968000 +09:00
+  - :path: layouts/simple.haml
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:25.984000 +09:00
+  - :path: layouts/foot.slim
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 08:55:25.951000 +09:00
+  - :path: tmp/dependencies
+    :cursor_offset: 0
+    :timestamp: 2012-10-05 10:16:14.153000 +09:00
+  - :path: config.yaml
+    :cursor_offset: 1941
+    :timestamp: 2012-10-05 13:13:45.301000 +09:00
+  - :path: content/index.slim
+    :cursor_offset: 886
+    :timestamp: 2012-10-05 13:26:19.836000 +09:00
+files_to_retain: 0

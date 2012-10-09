@@ -1,0 +1,6 @@
+--- 
+open_files: 
+  - layouts/foot.slim
+  - tmp/dependencies
+  - config.yaml
+  - content/index.slim
