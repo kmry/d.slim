@@ -1,0 +1,85 @@
+#!/usr/bin/env ruby
+
+compile '/assets/images/*' do
+end
+
+# The base javascript and stylesheet files
+compile %r{/assets/(app|styles)*} do
+  puts item.inspect
+  ext = item[:extension]
+  #puts item[:content_filename]
+  unless item[:filename].include?('_') or item[:content_filename].include?('vendor')
+  #  filter :erb
+    filter :coffeescript            if ext == 'coffee'
+    filter :sass, :syntax => :scss  if ext == 'scss'
+    filter :sass, :syntax => :sass  if ext == 'sass'
+   # filter :concat unless %W(sass scss).include?(ext)
+    #filter :cache_buster
+    #filter :minify
+  end
+end
+
+compile 'doc/*' do
+  #puts item.inspect#記法はmarkdown とslimに対応
+  case item[:extension]
+    when 'png', 'jpg', 'jpeg', 'js', 'ico','psd'
+    when 'md'
+      filter :kramdown
+    when 'slim'
+      filter :slim
+      filter :typogruby
+      layout 'default'
+      filter :cache_buster
+    when 'nav'
+      filter :slim
+    end
+end
+
+compile 'OEBPS/*' do
+  case item[:extension]
+    when 'slim'
+      puts "compiling #{item.inspect}"
+      filter :slim
+  end
+end
+
+compile 'META-INF/*' do
+end
+
+# Don't include any library files, as they should be included in the manifest files (lib.js, styles.css)
+route %r{'/assets/vendor/*.css'} do
+end
+
+route '/OEBPS/mimetype/minetype.*' do
+  '/mimetype'
+end
+
+route '/META-INF/*' do
+  '/META-INF/container.xml'
+end
+
+route '/OEBPS/package/*' do
+  '/OEBPS/package.opf'
+end
+
+#(コメントアウト理由)ncxはepub2時代のもの
+#route '/OEBPS/toc' do
+# '/OEBPS/toc.ncx'
+#end
+
+route '/assets/(app|lib|styles)/*' do
+end
+#画像については、拡張子を保持し、何もしない
+route '/assets/images/*' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+route '/doc/*' do
+  case item[:extension]
+    when 'opf','xml', 'png', 'jpg','JPG', 'jpeg', 'js', 'ico'
+      item.identifier.chop + '.' + item[:extension]
+    else
+      item.identifier.chop + '.xhtml'
+  end
+end
+
